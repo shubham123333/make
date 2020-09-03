@@ -22,32 +22,68 @@
   </head>
   <body>
     <h1 style="color: tomato; text-align: left;"><strong>contact us:</strong></h1>
+    <div class="row"> 
+      <div class="col-md-7">  
+          <form method="post" action='/submit'>
+           {% csrf_token %}
+            <div class="form-group" > 
+             
+              <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name" required="">
+            </div>
+            <div class="form-group"> 
+              <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required="">
+            </div>
+                          <div class="form-group"> 
+                              <input type="number" min="0" class="form-control" id="mobile_c" placeholder="Enter Mobile" name="mobile_c" minlength="10" maxlength="10" required="">
+                          </div>
+            <div class="form-group">
+                              <textarea class="form-control" rows="5" name="message" id="email_message" maxlength="250" placeholder="Message" data-msg="Please Write Your Message" style="font-family: sans-serif;" required=""></textarea>
+                          </div> 
+            <button type="button" id="submit_contact" class="btn bgTheme Bghover">Submit</button>
+          </form> 
+      </div>
+      <div class="col-md-5 ">
+        <div class="contact-location"> 
+          <!--<h5>MADE EASY PRIME,</h5>-->
+          <h5 class="mb-4" style="color:#797e82;"><i class="fa fa-map-marker"></i> MAKE EASY , <br>shobhit university road ,gangoh <br>247341</h5>
+          <h5 class="h5contact"> For Admission and Course related Queries : </h5>
+          <ul>
+            <li class="mb-3">
+              <p style="margin-bottom:5px;">1. For Civil Services Exam:</p>
+              <a href="mailto:cse@madeeasyprime.com"><p class="mb-0"><i class="fa fa-envelope">makeeay</p></a>
+              <a href=""><p class="mb-0"><i class="fa fa-phone"></i> 8755968766,875596875</p></a>
+            </li>
+            <li class="mb-3">
+              <p style="margin-bottom:5px;">2. For GATE &amp; ESE Exams :</p>
+              <a href="mailto:esegate@madeeasyprime.com"><p class="mb-0"><i class="fa fa-envelope"></i>makeeay</p></a>
+              <a href=""><p class="mb-0"><i class="fa fa-phone"></i> 8755968766</p></a>
+            </li>
+            <li class="mb-3">
+              <p style="margin-bottom:5px;">3. For SSC Exams : </p>
+              <a href="mailto:ssc@madeeasyprime.com"><p class="mb-0"><i class="fa fa-envelope"></i>makeeasy@gmail.com</p></a>
+              <a href=""><p class="mb-0"><i class="fa fa-phone"></i>8755968766</p></a>
+            </li>
+          </ul>
+          
+          <h5 class="h5contact">For Login &amp; Technical Support (for all courses) :</h5>
+          <ul>
+            <li>
+              <a href="mailto:info@madeeasyprime.com"><p class="mb-0"><i class="fa fa-envelope"></i> 875596sh@gmail.com</p></a>
+              <a href=""><p class="mb-0"><i class="fa fa-phone"></i> 8755968766</p></a>
+            </li>
+          </ul>
+         
+        </div>
+      </div>  
+  </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  <form method='post' action='/submit'>
-  {% csrf_token %}
-  <div class="form-group">
-    <label for="exampleInputEmail1">name</label>
-    <input  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name=username>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" name='password'>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">phone-no:</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" name='phone'>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">enter email:</label>
-    <input type="email" class="form-control" id="exampleInputPassword1" name='email'>
-  </div>
  
-  <button type="submit" class="btn btn-primary">Submit</button>
+   
 </form>
   </body>
 </html>
